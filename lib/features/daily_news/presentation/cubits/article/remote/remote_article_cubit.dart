@@ -8,15 +8,15 @@ import 'package:news_app_clean_architecture/features/daily_news/domain/usecase/g
 part 'remote_article_state.dart';
 
 class RemoteArticleCubit extends Cubit<RemoteArticleState> {
-  final GetArticleUseCase _getArticleUseCase;
+  final GetArticleUseCase getArticleUseCase;
 
-  RemoteArticleCubit(this._getArticleUseCase)
+  RemoteArticleCubit({required this.getArticleUseCase})
     : super(const RemoteArticlesLoading()) {
     getArticles();
   }
 
   void getArticles() async {
-    final dataState = await _getArticleUseCase();
+    final dataState = await getArticleUseCase();
 
     if (dataState is DataSuccess && dataState.data!.isNotEmpty) {
       emit(RemoteArticlesDone(dataState.data!));

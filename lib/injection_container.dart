@@ -17,5 +17,7 @@ Future<void> initializeDepedencies() async {
 
   sl.registerSingleton<GetArticleUseCase>(GetArticleUseCase(sl()));
 
-  sl.registerSingleton<RemoteArticleCubit>(RemoteArticleCubit(sl()));
+  sl.registerSingleton<RemoteArticleCubit>(
+    RemoteArticleCubit(getArticleUseCase: sl()),
+  );
 }

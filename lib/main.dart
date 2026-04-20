@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app_clean_architecture/features/daily_news/presentation/pages/daily_news.dart';
+import 'package:news_app_clean_architecture/config/themes/app_themes.dart';
+import 'package:news_app_clean_architecture/features/daily_news/presentation/pages/daily_news_view.dart';
 import 'package:news_app_clean_architecture/injection_container.dart';
 
 void main() async {
@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(textTheme: GoogleFonts.mulishTextTheme()),
-      home: DailyNews(),
+      debugShowCheckedModeBanner: false,
+      theme: theme(),
+      home: DailyNewsView(),
     );
   }
 }

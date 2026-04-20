@@ -5,7 +5,18 @@ import 'package:news_app_clean_architecture/features/daily_news/data/models/arti
 class NewsApiService {
   final Dio _dio;
 
-  NewsApiService(this._dio);
+  NewsApiService(this._dio) {
+    _dio.interceptors.add(
+      LogInterceptor(
+        request: false,
+        requestHeader: true,
+        requestBody: true,
+        responseHeader: false,
+        responseBody: false,
+        error: true,
+      ),
+    );
+  }
 
   Future<Response<List<ArticleModel>>> getNewsArticles({
     String? apiKey,
