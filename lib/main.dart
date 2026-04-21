@@ -4,7 +4,10 @@ import 'package:news_app_clean_architecture/features/daily_news/presentation/pag
 import 'package:news_app_clean_architecture/injection_container.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await initializeDepedencies();
+
   runApp(const MyApp());
 }
 

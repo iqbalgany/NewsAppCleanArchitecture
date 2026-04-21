@@ -18,7 +18,7 @@ class ArticleTile extends StatelessWidget {
 
   CachedNetworkImage _buildImage(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: article!.urlToImage!,
+      imageUrl: article?.urlToImage ?? '',
       imageBuilder: (context, imageProvider) => Padding(
         padding: EdgeInsetsGeometry.all(10),
         child: ClipRRect(
