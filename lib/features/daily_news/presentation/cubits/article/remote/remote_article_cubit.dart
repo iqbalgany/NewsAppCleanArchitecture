@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:news_app_clean_architecture/core/resources/data_state.dart';
 import 'package:news_app_clean_architecture/features/daily_news/domain/entities/article.dart';
-import 'package:news_app_clean_architecture/features/daily_news/domain/usecase/get_article.dart';
+import 'package:news_app_clean_architecture/features/daily_news/domain/usecases/get_article.dart';
 
 part 'remote_article_state.dart';
 

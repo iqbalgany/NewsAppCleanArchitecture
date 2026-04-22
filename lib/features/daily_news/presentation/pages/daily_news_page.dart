@@ -33,7 +33,7 @@ class DailyNewsPage extends StatelessWidget {
         if (articleState is RemoteArticlesDone) {
           return ListView.separated(
             itemCount: articleState.articles!.length,
-            separatorBuilder: (context, index) => SizedBox(height: 10),
+            separatorBuilder: (context, index) => SizedBox(height: 5),
             itemBuilder: (context, index) {
               final article = articleState.articles![index];
               return ArticleTile(article);

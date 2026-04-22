@@ -12,6 +12,7 @@ ThemeData theme() {
 AppBarThemeData appBarTheme() {
   return AppBarThemeData(
     backgroundColor: Colors.white,
+    surfaceTintColor: Colors.white,
     elevation: 0,
     centerTitle: true,
     iconTheme: IconThemeData(color: Color(0xff8b8b8b)),
